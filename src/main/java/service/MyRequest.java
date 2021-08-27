@@ -32,8 +32,25 @@ public class MyRequest {
         JSONArray transports = data.getJSONArray("transports");
         List<Transport> transportList = new ArrayList<>();
         for (int i = 0; i < transports.length(); i++) {
+            String time = "n/a";
             JSONObject obj = transports.getJSONObject(i);
-            Transport transport = new Transport(obj.optString("name"),obj.optString("type"),"add later");
+            JSONArray threads = obj.getJSONArray("threads");
+//            System.out.println(threads);
+            JSONObject threads0 = threads.getJSONObject(0);
+            JSONObject briefSchedule = threads0.getJSONObject("BriefSchedule");
+            JSONArray events = briefSchedule.getJSONArray("Events");
+//            System.out.println(events);
+            if (events.length() > 0) {
+                JSONObject events0 = events.getJSONObject(0);
+                if (events0.has("Estimated")) {
+                    JSONObject estimated = events0.getJSONObject("Estimated");
+                    time = estimated.getString("text");
+                }
+            }
+
+//            System.out.println(time);
+
+            Transport transport = new Transport(obj.optString("name"), obj.optString("type"), time);
             transportList.add(transport);
         }
         return transportList;
@@ -65,7 +82,7 @@ public class MyRequest {
                     // return it as a String
                     String result = EntityUtils.toString(entity);
                     res = result;
-                    System.out.println(result);
+//                    System.out.println(result);
                 }
 
             } finally {

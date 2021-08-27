@@ -11,6 +11,7 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboar
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import service.MyRequest;
 import service.StopService;
+import service.TransportService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +55,7 @@ public class MySendMessage implements Runnable {
                 }
 
                 if (update.hasCallbackQuery()) {
+
                     if (update.getCallbackQuery().getData().split(":")[0].equals("stop")) {
                         SendMessage sendMessage = new SendMessage();
                         sendMessage.setChatId(update.getCallbackQuery().getMessage().getChatId());
@@ -64,10 +66,14 @@ public class MySendMessage implements Runnable {
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
-                    } else {
+                    }
+
+                    if (update.getCallbackQuery().getData().split(":")[0].equals("transport")) {
+                        TransportService transportService = new TransportService();
+                        Transport transport = transportService.getTransport(update.getCallbackQuery().getData().split(":")[1]);
                         SendMessage sendMessage = new SendMessage();
                         sendMessage.setChatId(update.getCallbackQuery().getMessage().getChatId());
-                        sendMessage.setText(update.getCallbackQuery().getData());
+                        sendMessage.setText(transport.getEstimatedTime());
                         try {
                             System.out.println("request");
                         } catch (RuntimeException e) {
@@ -87,15 +93,16 @@ public class MySendMessage implements Runnable {
 
     private ReplyKeyboard createTransportButtonList() {
         List<List<InlineKeyboardButton>> rows = new ArrayList<>();
-        List<InlineKeyboardButton> keyboardButtonsRow = new ArrayList<>();
+
         List<Transport> transportList = MyRequest.getTransportList();
-        for (Transport t: transportList) {
+        for (Transport t : transportList) {
             InlineKeyboardButton button = new InlineKeyboardButton();
-            button.setText(t.getName());
-            button.setCallbackData("transport:");
+            button.setText(t.getType()+" "+t.getName());
+            button.setCallbackData("transport:"+t.getType()+t.getName());
+            List<InlineKeyboardButton> keyboardButtonsRow = new ArrayList<>();
             keyboardButtonsRow.add(button);
+            rows.add(keyboardButtonsRow);
         }
-        rows.add(keyboardButtonsRow);
         InlineKeyboardMarkup markup = new InlineKeyboardMarkup();
         markup.setKeyboard(rows);
         return markup;
