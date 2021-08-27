@@ -1,0 +1,60 @@
+2021-08-25 11:49:21,083[INFO ][main            ][                     LongPolling] - TelegramAPI started. Look for messages
+2021-08-25 11:49:33,075[DEBUG][elegram Executor][                     LongPolling] - new Update recieve
+2021-08-25 11:51:11,188[INFO ][main            ][                     LongPolling] - TelegramAPI started. Look for messages
+2021-08-25 11:51:16,016[DEBUG][elegram Executor][                     LongPolling] - new Update recieve
+2021-08-25 11:51:19,546[DEBUG][elegram Executor][                     LongPolling] - new Update recieve
+2021-08-25 11:51:21,908[DEBUG][elegram Executor][                     LongPolling] - new Update recieve
+2021-08-25 11:52:58,990[INFO ][main            ][                     LongPolling] - TelegramAPI started. Look for messages
+2021-08-25 11:53:00,349[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950127
+2021-08-25 12:13:32,246[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950128
+2021-08-25 12:14:04,843[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950129
+2021-08-25 12:14:04,921[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950130
+2021-08-25 12:14:05,078[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950131
+2021-08-25 12:14:05,078[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950132
+2021-08-25 12:14:10,170[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950133
+2021-08-25 12:14:13,686[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950134
+2021-08-25 13:26:38,786[INFO ][main            ][                     LongPolling] - TelegramAPI started. Look for messages
+2021-08-25 13:27:05,982[DEBUG][elegram Executor][                     LongPolling] - Receive new Update. updateID: 480950135
+2021-08-25 15:57:54,688[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 15:58:13,074[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950136
+2021-08-25 15:58:24,573[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950137
+2021-08-25 15:58:27,759[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950138
+2021-08-25 15:58:33,820[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950139
+2021-08-25 15:58:48,410[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950140
+2021-08-25 15:59:13,045[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 15:59:19,121[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950141
+2021-08-25 15:59:28,572[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950142
+2021-08-25 15:59:36,695[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950143
+2021-08-25 16:00:30,181[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:01:04,220[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950144
+2021-08-25 16:01:38,163[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950145
+2021-08-25 16:01:55,190[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950146
+2021-08-25 16:02:52,752[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:03:10,327[DEBUG][elegram Executor][                             bot.Bot] - Receive new Update. updateID: 480950147
+2021-08-25 16:07:43,646[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:11:15,597[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:11:45,328[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:12:17,354[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:12:17,370[INFO ][MsgReciever     ][                  ReceiveMessage] - give me a sign! 2
+2021-08-25 16:14:17,797[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:15:52,057[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-25 16:20:01,794[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 12:13:57,640[INFO ][main            ][                             bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 14:13:09,672[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 14:17:26,597[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:15:40,795[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:16:55,864[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:17:15,232[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:21:43,316[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:23:17,786[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:25:55,289[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:34:12,389[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:35:41,894[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:36:58,671[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 16:38:30,199[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-26 17:22:09,985[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-27 09:21:51,430[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-27 09:24:02,800[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-27 09:38:12,652[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-27 09:40:33,803[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
+2021-08-27 13:20:18,147[INFO ][main            ][                         bot.Bot] - TelegramAPI started. Look for messages
