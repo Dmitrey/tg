@@ -10,14 +10,16 @@ import lombok.Setter;
 public class Stop {
     @Getter
     @Setter
-    private String myName;
-    @Getter
-    @Setter
     private String id;
     @Getter
     @Setter
-    private String s;
-    @Getter
-    @Setter
-    private String uri;
+    private String stopName;
+
+    @Override
+    public String toString() {
+        return "Stop{" +
+                "id='" + id + '\'' +
+                ", stopName='" + stopName + '\'' +
+                '}';
+    }
 }

@@ -14,7 +14,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
 
-        MyRequest.getTransportList();
+//        MyRequest.getTransportList();
 
         ApiContextInitializer.init();
         Bot bot = new Bot("onlineSercherBot","1680997109:AAFlQx5CM88y4PY-i3MQVsC-LFCuq3XAlFg");

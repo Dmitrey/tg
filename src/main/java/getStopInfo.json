@@ -6,7 +6,7 @@
       27.616149573,
       53.88895057
     ],
-    "currentTime": 1629962937530,
+    "currentTime": 1630416967287,
     "tzOffset": 10800,
     "type": "urban",
     "region": {
@@ -97,27 +97,18 @@
               }
             ],
             "BriefSchedule": {
-              "Events": [
-                {
-                  "Estimated": {
-                    "value": "1629963431",
-                    "tzOffset": 10800,
-                    "text": "10:37"
-                  },
-                  "vehicleId": "64675|00445440"
-                }
-              ],
+              "Events": [],
               "Frequencies": [
                 {
                   "text": "30 мин.",
                   "value": 1800,
                   "begin": {
-                    "value": "1629951644",
+                    "value": "1630383644",
                     "tzOffset": 10800,
                     "text": "07:20"
                   },
                   "end": {
-                    "value": "1629997964",
+                    "value": "1630429964",
                     "tzOffset": 10800,
                     "text": "20:12"
                   }
@@ -154,11 +145,19 @@
               "Events": [
                 {
                   "Estimated": {
-                    "value": "1629963986",
+                    "value": "1630417083",
                     "tzOffset": 10800,
-                    "text": "10:46"
+                    "text": "16:38"
                   },
-                  "vehicleId": "64675|00000661"
+                  "vehicleId": "64675|00000441"
+                },
+                {
+                  "Estimated": {
+                    "value": "1630417982",
+                    "tzOffset": 10800,
+                    "text": "16:53"
+                  },
+                  "vehicleId": "64675|00000547"
                 }
               ],
               "Frequencies": [
@@ -166,12 +165,12 @@
                   "text": "15 мин.",
                   "value": 900,
                   "begin": {
-                    "value": "1629946635",
+                    "value": "1630378635",
                     "tzOffset": 10800,
                     "text": "05:57"
                   },
                   "end": {
-                    "value": "1630011915",
+                    "value": "1630443915",
                     "tzOffset": 10800,
                     "text": "00:05"
                   }
@@ -208,19 +207,27 @@
               "Events": [
                 {
                   "Estimated": {
-                    "value": "1629963723",
+                    "value": "1630417272",
                     "tzOffset": 10800,
-                    "text": "10:42"
+                    "text": "16:41"
                   },
-                  "vehicleId": "64675|00445642"
+                  "vehicleId": "64675|00445794"
                 },
                 {
                   "Estimated": {
-                    "value": "1629964537",
+                    "value": "1630417975",
                     "tzOffset": 10800,
-                    "text": "10:55"
+                    "text": "16:52"
                   },
-                  "vehicleId": "64675|00005143"
+                  "vehicleId": "64675|00444963"
+                },
+                {
+                  "Estimated": {
+                    "value": "1630418281",
+                    "tzOffset": 10800,
+                    "text": "16:58"
+                  },
+                  "vehicleId": "64675|00445571"
                 }
               ],
               "Frequencies": [
@@ -228,12 +235,12 @@
                   "text": "10 мин.",
                   "value": 600,
                   "begin": {
-                    "value": "1629947834",
+                    "value": "1630379834",
                     "tzOffset": 10800,
                     "text": "06:17"
                   },
                   "end": {
-                    "value": "1630014074",
+                    "value": "1630446074",
                     "tzOffset": 10800,
                     "text": "00:41"
                   }
@@ -288,11 +295,19 @@
               "Events": [
                 {
                   "Estimated": {
-                    "value": "1629963535",
+                    "value": "1630417303",
                     "tzOffset": 10800,
-                    "text": "10:38"
+                    "text": "16:41"
                   },
-                  "vehicleId": "64675|00444871"
+                  "vehicleId": "64675|00000721"
+                },
+                {
+                  "Estimated": {
+                    "value": "1630418027",
+                    "tzOffset": 10800,
+                    "text": "16:53"
+                  },
+                  "vehicleId": "64675|00445131"
                 }
               ],
               "Frequencies": [
@@ -300,12 +315,12 @@
                   "text": "10 мин.",
                   "value": 600,
                   "begin": {
-                    "value": "1629946385",
+                    "value": "1630378385",
                     "tzOffset": 10800,
                     "text": "05:53"
                   },
                   "end": {
-                    "value": "1630012745",
+                    "value": "1630444745",
                     "tzOffset": 10800,
                     "text": "00:19"
                   }
@@ -342,11 +357,19 @@
               "Events": [
                 {
                   "Estimated": {
-                    "value": "1629964078",
+                    "value": "1630417156",
                     "tzOffset": 10800,
-                    "text": "10:47"
+                    "text": "16:39"
                   },
-                  "vehicleId": "64675|00001461"
+                  "vehicleId": "64675|00001444"
+                },
+                {
+                  "Estimated": {
+                    "value": "1630417985",
+                    "tzOffset": 10800,
+                    "text": "16:53"
+                  },
+                  "vehicleId": "64675|00001487"
                 }
               ],
               "Frequencies": [
@@ -354,12 +377,12 @@
                   "text": "15 мин.",
                   "value": 900,
                   "begin": {
-                    "value": "1629945796",
+                    "value": "1630377796",
                     "tzOffset": 10800,
                     "text": "05:43"
                   },
                   "end": {
-                    "value": "1630012876",
+                    "value": "1630444876",
                     "tzOffset": 10800,
                     "text": "00:21"
                   }
@@ -381,8 +404,17 @@
               }
             ],
             "BriefSchedule": {
-              "Events": [],
-              "Frequencies": []
+              "Events": [
+                {
+                  "Scheduled": {
+                    "value": "1630445820",
+                    "tzOffset": 10800,
+                    "text": "00:37"
+                  }
+                }
+              ],
+              "Frequencies": [],
+              "departureTime": "00:37"
             }
           }
         ],
@@ -411,18 +443,35 @@
               }
             ],
             "BriefSchedule": {
-              "Events": [],
+              "Events": [
+                {
+                  "Estimated": {
+                    "value": "1630417253",
+                    "tzOffset": 10800,
+                    "text": "16:40"
+                  },
+                  "vehicleId": "64675|00445439"
+                },
+                {
+                  "Estimated": {
+                    "value": "1630417811",
+                    "tzOffset": 10800,
+                    "text": "16:50"
+                  },
+                  "vehicleId": "64675|00001307"
+                }
+              ],
               "Frequencies": [
                 {
                   "text": "13 мин.",
                   "value": 780,
                   "begin": {
-                    "value": "1629979671",
+                    "value": "1630411671",
                     "tzOffset": 10800,
                     "text": "15:07"
                   },
                   "end": {
-                    "value": "1629998571",
+                    "value": "1630430571",
                     "tzOffset": 10800,
                     "text": "20:22"
                   }
@@ -459,28 +508,28 @@
               "Events": [
                 {
                   "Scheduled": {
-                    "value": "1629980880",
+                    "value": "1630418220",
                     "tzOffset": 10800,
-                    "text": "15:28"
+                    "text": "16:57"
                   }
                 },
                 {
                   "Scheduled": {
-                    "value": "1629982380",
+                    "value": "1630420140",
                     "tzOffset": 10800,
-                    "text": "15:53"
+                    "text": "17:29"
                   }
                 },
                 {
                   "Scheduled": {
-                    "value": "1629984540",
+                    "value": "1630422060",
                     "tzOffset": 10800,
-                    "text": "16:29"
+                    "text": "18:01"
                   }
                 }
               ],
               "Frequencies": [],
-              "departureTime": "15:28"
+              "departureTime": "16:57"
             }
           }
         ],
@@ -517,6 +566,289 @@
         "url": "https://yandex.by/maps/157/minsk/stops/stop__10045041/",
         "currentPage": true
       }
-    ]
+    ],
+    "searchResult": {
+      "type": "business",
+      "requestId": "1630416967284452-632035555-sas1-1184-sas-addrs-nmeta-new-8031",
+      "analyticsId": "1",
+      "title": "Станция метро Тракторный завод",
+      "description": "Беларусь, Минск, Долгобродская улица",
+      "address": "Беларусь, Минск, Долгобродская улица",
+      "coordinates": [
+        27.61615,
+        53.888951
+      ],
+      "displayCoordinates": [
+        27.61615,
+        53.888951
+      ],
+      "bounds": [
+        [
+          27.602078,
+          53.87491763
+        ],
+        [
+          27.630222,
+          53.90297963
+        ]
+      ],
+      "uri": "ymapsbm1://transit/stop?id=stop__10045041",
+      "logId": "dHlwZT1iaXpmaW5kZXI7aWQ9MjM4MzIwNjgxMzUy",
+      "id": "238320681352",
+      "metro": [
+        {
+          "id": "station__9880200",
+          "name": "Тракторный завод",
+          "distance": "62 м",
+          "distanceValue": 62.7807,
+          "coordinates": [
+            27.615772703,
+            53.88939571
+          ],
+          "type": "metro",
+          "color": "#cc0000"
+        },
+        {
+          "id": "station__9880199",
+          "name": "Партизанская",
+          "distance": "1,6 км",
+          "distanceValue": 1556.13,
+          "coordinates": [
+            27.627931986,
+            53.877347716
+          ],
+          "type": "metro",
+          "color": "#cc0000"
+        },
+        {
+          "id": "station__9880201",
+          "name": "Пролетарская",
+          "distance": "2,3 км",
+          "distanceValue": 2300.18,
+          "coordinates": [
+            27.585747206,
+            53.890440076
+          ],
+          "type": "metro",
+          "color": "#cc0000"
+        }
+      ],
+      "stops": [
+        {
+          "id": "stop__10045041",
+          "name": "Станция метро Тракторный завод",
+          "distance": "0 м",
+          "distanceValue": 0.0554871,
+          "coordinates": [
+            27.616149573,
+            53.88895057
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10046865",
+          "name": "Грицевца",
+          "distance": "250 м",
+          "distanceValue": 249.237,
+          "coordinates": [
+            27.616689883,
+            53.887361696
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10046757",
+          "name": "Тракторный завод",
+          "distance": "250 м",
+          "distanceValue": 250.958,
+          "coordinates": [
+            27.618015461,
+            53.888139663
+          ],
+          "type": "common"
+        },
+        {
+          "id": "1543323773",
+          "name": "Будённого",
+          "distance": "330 м",
+          "distanceValue": 328.083,
+          "coordinates": [
+            27.618813293,
+            53.886521256
+          ],
+          "type": "common"
+        },
+        {
+          "id": "stop__10046869",
+          "name": "Долгобродская",
+          "distance": "360 м",
+          "distanceValue": 358.856,
+          "coordinates": [
+            27.618429842,
+            53.88639415
+          ],
+          "type": "common"
+        }
+      ],
+      "panorama": {
+        "id": "1238477180_692493538_23_1558423089",
+        "direction": [
+          115.7,
+          10
+        ],
+        "point": {
+          "type": "Point",
+          "coordinates": [
+            27.6159163068,
+            53.8890171572
+          ]
+        },
+        "preview": "https://static-pano.maps.yandex.ru/v1/?panoid=1238477180_692493538_23_1558423089&size=500%2C240&azimuth=115.7&tilt=10&api_key=maps&signature=AwhjEtzKOacVA7QLremY5KSrZXDpJbOjca_hnzEWYwY="
+      },
+      "shortTitle": "Станция метро Тракторный завод",
+      "fullAddress": "Беларусь, Минск, Долгобродская улица",
+      "country": "Беларусь",
+      "status": "open",
+      "businessLinks": [],
+      "ratingData": {
+        "ratingCount": 0,
+        "ratingValue": 0,
+        "reviewCount": 0
+      },
+      "sources": [
+        {
+          "id": "yandex",
+          "name": "Яндекс",
+          "href": "https://www.yandex.ru"
+        }
+      ],
+      "categories": [
+        {
+          "id": "223677355200",
+          "name": "Остановка общественного транспорта",
+          "class": "bus stop",
+          "seoname": "public_transport_stop",
+          "pluralName": "Остановки общественного транспорта"
+        }
+      ],
+      "featureGroups": [],
+      "businessProperties": {
+        "has_verified_owner": false,
+        "geoproduct_poi_color": "#ABAEB3",
+        "hide_claim_organization": true,
+        "sensitive": true,
+        "geoproduct_poi_label_color": "#7A7F85"
+      },
+      "modularSnippet": {
+        "snippet_show_title": true,
+        "snippet_show_rating": true,
+        "snippet_show_photo": "single_photo",
+        "snippet_show_eta": true,
+        "snippet_show_category": "single_category",
+        "snippet_show_subline": [
+          "no_subline",
+          "closed_for_visitors",
+          "closed_for_without_qr"
+        ]
+      },
+      "seoname": "stantsiya_metro_traktorny_zavod",
+      "geoId": 102264,
+      "compositeAddress": {
+        "locality": "Минск",
+        "street": "Долгобродская улица"
+      },
+      "references": [
+        {
+          "id": "2017216287",
+          "scope": "nyak"
+        }
+      ],
+      "region": {
+        "id": 157,
+        "capitalId": 0,
+        "hierarchy": [
+          149,
+          29630,
+          157
+        ],
+        "seoname": "minsk",
+        "bounds": [
+          [
+            27.2183025,
+            53.813547509886064
+          ],
+          [
+            27.9046595,
+            53.99125550988607
+          ]
+        ],
+        "longitude": 27.561481,
+        "latitude": 53.902496,
+        "zoom": 12,
+        "names": {
+          "ablative": "",
+          "accusative": "Минск",
+          "dative": "Минску",
+          "directional": "",
+          "genitive": "Минска",
+          "instrumental": "Минском",
+          "locative": "",
+          "nominative": "Минск",
+          "preposition": "в",
+          "prepositional": "Минске"
+        }
+      },
+      "events": [],
+      "breadcrumbs": [
+        {
+          "name": "Карты",
+          "type": "root",
+          "url": "https://yandex.by/maps/"
+        },
+        {
+          "name": "Минск",
+          "type": "region",
+          "url": "https://yandex.by/maps/157/minsk/",
+          "region": {
+            "center": [
+              27.561481,
+              53.902496
+            ],
+            "zoom": 12
+          }
+        },
+        {
+          "category": {
+            "id": "223677355200",
+            "name": "Остановка общественного транспорта",
+            "class": "bus stop",
+            "seoname": "public_transport_stop",
+            "pluralName": "Остановки общественного транспорта"
+          },
+          "name": "Остановки общественного транспорта",
+          "type": "category",
+          "url": "https://yandex.by/maps/157/minsk/category/public_transport_stop/223677355200/"
+        },
+        {
+          "name": "Станция метро Тракторный завод",
+          "type": "search",
+          "url": "https://yandex.by/maps/org/stantsiya_metro_traktorny_zavod/238320681352/",
+          "currentPage": true
+        }
+      ],
+      "geoWhere": {
+        "id": "31325456",
+        "kind": "street",
+        "coordinates": [
+          27.614068,
+          53.890229
+        ],
+        "displayCoordinates": [
+          27.614068,
+          53.890229
+        ],
+        "encodedCoordinates": "Zk4YcAZkSUMPQFtpfXR4cX5hbQ=="
+      }
+    }
   }
 }

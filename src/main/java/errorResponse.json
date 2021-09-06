@@ -1,0 +1,196 @@
+{
+  "data": {
+    "vehicles": [
+      {
+        "type": "FeatureCollection",
+        "properties": {
+          "type": "FeatureCollection",
+          "VehicleMetaData": {
+            "id": "64675|00005141",
+            "Transport": {
+              "id": "64675|00005141",
+              "threadId": "2017215202",
+              "lineId": "2017215359",
+              "name": "84",
+              "Types": [
+                "bus"
+              ],
+              "type": "bus",
+              "uri": "ymapsbm1://transit/line?id=2017215359&ll=27.534965%2C53.880844&name=84&r=7309&type=bus",
+              "seoname": "84"
+            }
+          }
+        },
+        "features": [
+          {
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  27.631111999999998,
+                  53.905217
+                ],
+                [
+                  27.630627999999998,
+                  53.905038999999995
+                ],
+                [
+                  27.630276,
+                  53.904908
+                ]
+              ]
+            },
+            "properties": {
+              "type": "Feature",
+              "TrajectorySegmentMetaData": {
+                "duration": 15,
+                "time": 1630925789
+              }
+            }
+          },
+          {
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  27.630276,
+                  53.904908
+                ],
+                [
+                  27.629514,
+                  53.904626
+                ],
+                [
+                  27.628579,
+                  53.90428
+                ],
+                [
+                  27.628397999999997,
+                  53.904213
+                ],
+                [
+                  27.627831,
+                  53.904008
+                ],
+                [
+                  27.627677,
+                  53.903952
+                ],
+                [
+                  27.627335,
+                  53.903828
+                ],
+                [
+                  27.627326,
+                  53.903824
+                ]
+              ]
+            },
+            "properties": {
+              "type": "Feature",
+              "TrajectorySegmentMetaData": {
+                "duration": 35,
+                "time": 1630925804
+              }
+            }
+          },
+          {
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  27.627326,
+                  53.903824
+                ],
+                [
+                  27.627001,
+                  53.903706
+                ]
+              ]
+            },
+            "properties": {
+              "type": "Feature",
+              "TrajectorySegmentMetaData": {
+                "duration": 10,
+                "time": 1630925839
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "regionInfo": {
+      "id": 102264,
+      "capitalId": 0,
+      "hierarchy": [
+        149,
+        29630,
+        157,
+        102264
+      ],
+      "seoname": "partizansky-district",
+      "bounds": [
+        [
+          27.56948,
+          53.877378735497665
+        ],
+        [
+          27.699098,
+          53.928319735497666
+        ]
+      ],
+      "longitude": 27.634289,
+      "latitude": 53.902857,
+      "zoom": 14,
+      "names": {
+        "ablative": "",
+        "accusative": "Партизанский район",
+        "dative": "Партизанскому району",
+        "directional": "",
+        "genitive": "Партизанского района",
+        "instrumental": "Партизанским районом",
+        "locative": "",
+        "nominative": "Партизанский район",
+        "preposition": "в",
+        "prepositional": "Партизанском районе"
+      },
+      "parentRegion": {
+        "id": 157,
+        "capitalId": 0,
+        "hierarchy": [
+          149,
+          29630,
+          157
+        ],
+        "seoname": "minsk",
+        "bounds": [
+          [
+            27.2183025,
+            53.813547509886064
+          ],
+          [
+            27.9046595,
+            53.99125550988607
+          ]
+        ],
+        "longitude": 27.561481,
+        "latitude": 53.902496,
+        "zoom": 12,
+        "names": {
+          "ablative": "",
+          "accusative": "Минск",
+          "dative": "Минску",
+          "directional": "",
+          "genitive": "Минска",
+          "instrumental": "Минском",
+          "locative": "",
+          "nominative": "Минск",
+          "preposition": "в",
+          "prepositional": "Минске"
+        }
+      },
+      "title": "Минска",
+      "subtitle": "Партизанский район"
+    }
+  }
+}

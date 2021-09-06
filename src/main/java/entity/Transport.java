@@ -10,7 +10,13 @@ import lombok.Setter;
 public class Transport {
     @Getter
     @Setter
+    String fullName;
+    @Getter
+    @Setter
     String name;
+    @Getter
+    @Setter
+    String direction;
     @Getter
     @Setter
     String type;

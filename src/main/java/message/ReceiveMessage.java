@@ -28,8 +28,4 @@ public class ReceiveMessage implements Runnable {
             }
         }
     }
-
-//    public String showAddress(){
-//
-//    }
 }
