@@ -20,9 +20,6 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>requester</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
