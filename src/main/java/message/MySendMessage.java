@@ -57,6 +57,10 @@ public class MySendMessage implements Runnable {
                             }
                             break;
                         default:
+                            if (command.length() < 3){
+                                sendMessage(update.getMessage().getChatId(),"Enter at least 3 symbols");
+                                break;
+                            }
                             // he-he boi, time to some stupid search))
                             List<Stop> stops = StopNameSearcher.findStop(command);
                             if (stops.isEmpty()) {
@@ -106,10 +110,22 @@ public class MySendMessage implements Runnable {
                                 stopId, timer, update.getCallbackQuery().getMessage().getChatId(), bot);
                         System.out.println("Hi there"+transportName + stopId + timer + update.getCallbackQuery().getMessage().getChatId()+"end");
                         timer.scheduleAtFixedRate(task, 0, 10_000);
+                        sendMessage(update.getCallbackQuery().getMessage().getChatId(), "notification will be send");
                     }
                 }
 
             }
+        }
+    }
+
+    private void sendMessage(Long chatId, String message) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(message);
+        try {
+            bot.execute(sendMessage);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
         }
     }
 
@@ -172,7 +188,6 @@ public class MySendMessage implements Runnable {
     }
 
     ReplyKeyboard createStopsButtonList() {
-
         List<List<InlineKeyboardButton>> rows = new ArrayList<>();
         for (Stop stop : service.getStopList()) {
             InlineKeyboardButton button = new InlineKeyboardButton();
