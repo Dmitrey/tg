@@ -9,6 +9,7 @@ import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboard;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
+import service.MyRequest;
 import service.StopNameSearcher;
 import service.StopService;
 import service.TransportService;
@@ -90,8 +91,13 @@ public class MySendMessage implements Runnable {
                         String message = update.getCallbackQuery().getData().split(":")[1];
                         transportName = update.getCallbackQuery().getData().split(":")[2];
                         stopId = update.getCallbackQuery().getData().split(":")[3];
+                        List<Transport> transportList = MyRequest.getTransports(stopId);
+                        for (Transport tr:transportList) {
+                            if (tr.getName().equals(transportName))
+                                sendMessage.setText(tr.getEstimatedTime());
+                        }
                         sendMessage.setChatId(update.getCallbackQuery().getMessage().getChatId());
-                        sendMessage.setText(update.getCallbackQuery().getData().split(":")[1]);
+//                        sendMessage.setText(update.getCallbackQuery().getData().split(":")[1]);
                         if (update.getCallbackQuery().getData().split(":")[1].toLowerCase().contains("каждые")) {
                             message+="\nWant to get real estimated time when available?";
                             sendMessage.setReplyMarkup(createMarkupForTrackAnswer());
