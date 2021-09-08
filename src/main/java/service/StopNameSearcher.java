@@ -11,10 +11,13 @@ public class StopNameSearcher {
     public static List<Stop> findStop(String stopName) {
         List<Stop> resList = new ArrayList<>();
         for (Stop stop : StopsList.list) {
-            for (String str : stop.getStopName().split(" ")) {
-                if (str.toLowerCase().startsWith(stopName.toLowerCase())) {
-                    resList.add(stop);
+            for (String strDb : stop.getStopName().split(" ")) {
+                for (String strNew:stopName.split(" ")) {
+                    if (strDb.toLowerCase().startsWith(strNew.toLowerCase())) {
+                        resList.add(stop);
+                    }
                 }
+
             }
         }
         for (Stop stop : resList) {
