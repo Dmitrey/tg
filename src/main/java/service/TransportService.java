@@ -29,4 +29,8 @@ public class TransportService {
         }
         return transportList;
     }
+
+    public static List<Transport> getTransportByStop(Stop stop) {
+        return MyRequest.getTransports(stop);
+    }
 }

@@ -1,12 +1,12 @@
 {
   "data": {
-    "id": "stop__10045041",
+    "id": "stop__10046735",
     "name": "Станция метро Тракторный завод",
     "coordinates": [
-      27.616149573,
-      53.88895057
+      27.615513441,
+      53.889095136
     ],
-    "currentTime": 1630416967287,
+    "currentTime": 1631000715658,
     "tzOffset": 10800,
     "type": "urban",
     "region": {
@@ -46,118 +46,232 @@
     },
     "transports": [
       {
-        "lineId": "157_43d_bus_minskdata",
-        "name": "43д",
+        "lineId": "2017214975",
+        "name": "3",
         "Types": [
-          "bus"
+          "tramway"
         ],
-        "type": "bus",
+        "type": "tramway",
         "threads": [
           {
-            "threadId": "157B_43d_bus_minskdata",
-            "noBoarding": true,
-            "EssentialStops": [
-              {
-                "id": "stop__10045804",
-                "name": "Степянка"
-              },
-              {
-                "id": "stop__10045041",
-                "name": "Станция метро Тракторный завод"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [],
-              "Frequencies": []
-            }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=157_43d_bus_minskdata&ll=27.646116%2C53.900704&name=43%D0%B4&r=2408&type=bus",
-        "seoname": "43d"
-      },
-      {
-        "lineId": "2017214904",
-        "name": "14",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
-          {
-            "threadId": "2017215724",
+            "threadId": "2017214840",
             "noBoarding": false,
             "EssentialStops": [
               {
-                "id": "stop__10045824",
-                "name": "ДС Восточная"
+                "id": "stop__10046725",
+                "name": "ДС Озеро"
               },
               {
-                "id": "stop__10045803",
-                "name": "Степянка"
+                "id": "stop__10046745",
+                "name": "ДС Серебрянка"
               }
             ],
             "BriefSchedule": {
               "Events": [],
               "Frequencies": [
                 {
-                  "text": "30 мин.",
-                  "value": 1800,
+                  "text": "5 мин.",
+                  "value": 300,
                   "begin": {
-                    "value": "1630383644",
+                    "value": "1630983395",
                     "tzOffset": 10800,
-                    "text": "07:20"
+                    "text": "05:56"
                   },
                   "end": {
-                    "value": "1630429964",
+                    "value": "1631050295",
                     "tzOffset": 10800,
-                    "text": "20:12"
+                    "text": "00:31"
                   }
                 }
               ]
             }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=2017214904&ll=27.629248%2C53.899151&name=14&r=3473&type=bus",
-        "seoname": "14"
-      },
-      {
-        "lineId": "2017214970",
-        "name": "2с",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
+          },
           {
-            "threadId": "2017215696",
-            "noBoarding": true,
+            "threadId": "4173335243",
+            "noBoarding": false,
             "EssentialStops": [
               {
-                "id": "stop__10045457",
-                "name": "ДС Лошица-2"
+                "id": "stop__10046733",
+                "name": "Переулок Козлова"
               },
               {
-                "id": "stop__10045041",
-                "name": "Станция метро Тракторный завод"
+                "id": "stop__10046745",
+                "name": "ДС Серебрянка"
+              }
+            ],
+            "BriefSchedule": {
+              "Events": [
+                {
+                  "Scheduled": {
+                    "value": "1631015550",
+                    "tzOffset": 10800,
+                    "text": "14:52"
+                  }
+                },
+                {
+                  "Scheduled": {
+                    "value": "1631016270",
+                    "tzOffset": 10800,
+                    "text": "15:04"
+                  }
+                },
+                {
+                  "Scheduled": {
+                    "value": "1631017050",
+                    "tzOffset": 10800,
+                    "text": "15:17"
+                  }
+                }
+              ],
+              "Frequencies": [],
+              "departureTime": "14:52"
+            }
+          }
+        ],
+        "uri": "ymapsbm1://transit/line?id=2017214975&ll=27.569816%2C53.891434&name=3&r=4974&type=tramway",
+        "seoname": "3"
+      },
+      {
+        "lineId": "2017215524",
+        "name": "6",
+        "Types": [
+          "tramway"
+        ],
+        "type": "tramway",
+        "threads": [
+          {
+            "threadId": "2017215616",
+            "noBoarding": false,
+            "EssentialStops": [
+              {
+                "id": "stop__10046675",
+                "name": "ДС Зелёный Луг"
+              },
+              {
+                "id": "stop__10046745",
+                "name": "ДС Серебрянка"
               }
             ],
             "BriefSchedule": {
               "Events": [
                 {
                   "Estimated": {
-                    "value": "1630417083",
+                    "value": "1631001373",
                     "tzOffset": 10800,
-                    "text": "16:38"
+                    "text": "10:56"
                   },
-                  "vehicleId": "64675|00000441"
+                  "vehicleId": "64675|00020098"
                 },
                 {
                   "Estimated": {
-                    "value": "1630417982",
+                    "value": "1631001792",
                     "tzOffset": 10800,
-                    "text": "16:53"
+                    "text": "11:03"
                   },
-                  "vehicleId": "64675|00000547"
+                  "vehicleId": "64675|00020042"
+                },
+                {
+                  "Estimated": {
+                    "value": "1631002253",
+                    "tzOffset": 10800,
+                    "text": "11:10"
+                  },
+                  "vehicleId": "64675|00020091"
+                }
+              ],
+              "Frequencies": [
+                {
+                  "text": "5 мин.",
+                  "value": 300,
+                  "begin": {
+                    "value": "1630982557",
+                    "tzOffset": 10800,
+                    "text": "05:42"
+                  },
+                  "end": {
+                    "value": "1631050117",
+                    "tzOffset": 10800,
+                    "text": "00:28"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "threadId": "4173351003",
+            "noBoarding": false,
+            "EssentialStops": [
+              {
+                "id": "stop__10046733",
+                "name": "Переулок Козлова"
+              },
+              {
+                "id": "stop__10046745",
+                "name": "ДС Серебрянка"
+              }
+            ],
+            "BriefSchedule": {
+              "Events": [
+                {
+                  "Scheduled": {
+                    "value": "1631015956",
+                    "tzOffset": 10800,
+                    "text": "14:59"
+                  }
+                },
+                {
+                  "Scheduled": {
+                    "value": "1631017276",
+                    "tzOffset": 10800,
+                    "text": "15:21"
+                  }
+                },
+                {
+                  "Scheduled": {
+                    "value": "1631018956",
+                    "tzOffset": 10800,
+                    "text": "15:49"
+                  }
+                }
+              ],
+              "Frequencies": [],
+              "departureTime": "14:59"
+            }
+          }
+        ],
+        "uri": "ymapsbm1://transit/line?id=2017215524&ll=27.609872%2C53.901941&name=6&r=5848&type=tramway",
+        "seoname": "6"
+      },
+      {
+        "lineId": "2038150090",
+        "name": "7",
+        "Types": [
+          "tramway"
+        ],
+        "type": "tramway",
+        "threads": [
+          {
+            "threadId": "2038521140",
+            "noBoarding": false,
+            "EssentialStops": [
+              {
+                "id": "2038130590",
+                "name": "Площадь Мясникова"
+              },
+              {
+                "id": "stop__10046745",
+                "name": "ДС Серебрянка"
+              }
+            ],
+            "BriefSchedule": {
+              "Events": [
+                {
+                  "Estimated": {
+                    "value": "1631001508",
+                    "tzOffset": 10800,
+                    "text": "10:58"
+                  },
+                  "vehicleId": "64675|00020149"
                 }
               ],
               "Frequencies": [
@@ -165,376 +279,49 @@
                   "text": "15 мин.",
                   "value": 900,
                   "begin": {
-                    "value": "1630378635",
+                    "value": "1630985589",
                     "tzOffset": 10800,
-                    "text": "05:57"
+                    "text": "06:33"
                   },
                   "end": {
-                    "value": "1630443915",
+                    "value": "1631049129",
                     "tzOffset": 10800,
-                    "text": "00:05"
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=2017214970&ll=27.595047%2C53.862563&name=2%D1%81&r=3276&type=bus",
-        "seoname": "2s"
-      },
-      {
-        "lineId": "2017215359",
-        "name": "84",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
-          {
-            "threadId": "2017215201",
-            "noBoarding": false,
-            "EssentialStops": [
-              {
-                "id": "stop__10044885",
-                "name": "ДС Малиновка-4"
-              },
-              {
-                "id": "4273342099",
-                "name": "Слепянка"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [
-                {
-                  "Estimated": {
-                    "value": "1630417272",
-                    "tzOffset": 10800,
-                    "text": "16:41"
-                  },
-                  "vehicleId": "64675|00445794"
-                },
-                {
-                  "Estimated": {
-                    "value": "1630417975",
-                    "tzOffset": 10800,
-                    "text": "16:52"
-                  },
-                  "vehicleId": "64675|00444963"
-                },
-                {
-                  "Estimated": {
-                    "value": "1630418281",
-                    "tzOffset": 10800,
-                    "text": "16:58"
-                  },
-                  "vehicleId": "64675|00445571"
-                }
-              ],
-              "Frequencies": [
-                {
-                  "text": "10 мин.",
-                  "value": 600,
-                  "begin": {
-                    "value": "1630379834",
-                    "tzOffset": 10800,
-                    "text": "06:17"
-                  },
-                  "end": {
-                    "value": "1630446074",
-                    "tzOffset": 10800,
-                    "text": "00:41"
+                    "text": "00:12"
                   }
                 }
               ]
             }
           },
           {
-            "threadId": "4171168989",
+            "threadId": "4173361263",
             "noBoarding": false,
             "EssentialStops": [
               {
-                "id": "stop__10045347",
-                "name": "Станция метро Михалово"
+                "id": "stop__10046733",
+                "name": "Переулок Козлова"
               },
               {
-                "id": "4273342099",
-                "name": "Слепянка"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [],
-              "Frequencies": []
-            }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=2017215359&ll=27.534965%2C53.880844&name=84&r=7309&type=bus",
-        "seoname": "84"
-      },
-      {
-        "lineId": "2017215378",
-        "name": "106",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
-          {
-            "threadId": "2017215289",
-            "noBoarding": true,
-            "EssentialStops": [
-              {
-                "id": "stop__10045030",
-                "name": "ДС Ангарская-4"
-              },
-              {
-                "id": "stop__10045041",
-                "name": "Станция метро Тракторный завод"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [
-                {
-                  "Estimated": {
-                    "value": "1630417303",
-                    "tzOffset": 10800,
-                    "text": "16:41"
-                  },
-                  "vehicleId": "64675|00000721"
-                },
-                {
-                  "Estimated": {
-                    "value": "1630418027",
-                    "tzOffset": 10800,
-                    "text": "16:53"
-                  },
-                  "vehicleId": "64675|00445131"
-                }
-              ],
-              "Frequencies": [
-                {
-                  "text": "10 мин.",
-                  "value": 600,
-                  "begin": {
-                    "value": "1630378385",
-                    "tzOffset": 10800,
-                    "text": "05:53"
-                  },
-                  "end": {
-                    "value": "1630444745",
-                    "tzOffset": 10800,
-                    "text": "00:19"
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=2017215378&ll=27.652693%2C53.888533&name=106&r=2506&type=bus",
-        "seoname": "106"
-      },
-      {
-        "lineId": "2017215551",
-        "name": "43",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
-          {
-            "threadId": "2017215314",
-            "noBoarding": false,
-            "EssentialStops": [
-              {
-                "id": "stop__10045804",
-                "name": "Степянка"
-              },
-              {
-                "id": "100122273",
-                "name": "ДС Дружная"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [
-                {
-                  "Estimated": {
-                    "value": "1630417156",
-                    "tzOffset": 10800,
-                    "text": "16:39"
-                  },
-                  "vehicleId": "64675|00001444"
-                },
-                {
-                  "Estimated": {
-                    "value": "1630417985",
-                    "tzOffset": 10800,
-                    "text": "16:53"
-                  },
-                  "vehicleId": "64675|00001487"
-                }
-              ],
-              "Frequencies": [
-                {
-                  "text": "15 мин.",
-                  "value": 900,
-                  "begin": {
-                    "value": "1630377796",
-                    "tzOffset": 10800,
-                    "text": "05:43"
-                  },
-                  "end": {
-                    "value": "1630444876",
-                    "tzOffset": 10800,
-                    "text": "00:21"
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "threadId": "4170925469",
-            "noBoarding": true,
-            "EssentialStops": [
-              {
-                "id": "stop__10045804",
-                "name": "Степянка"
-              },
-              {
-                "id": "stop__10045041",
-                "name": "Станция метро Тракторный завод"
+                "id": "stop__10046745",
+                "name": "ДС Серебрянка"
               }
             ],
             "BriefSchedule": {
               "Events": [
                 {
                   "Scheduled": {
-                    "value": "1630445820",
+                    "value": "1631016772",
                     "tzOffset": 10800,
-                    "text": "00:37"
+                    "text": "15:12"
                   }
                 }
               ],
               "Frequencies": [],
-              "departureTime": "00:37"
+              "departureTime": "15:12"
             }
           }
         ],
-        "uri": "ymapsbm1://transit/line?id=2017215551&ll=27.611688%2C53.899835&name=43&r=4527&type=bus",
-        "seoname": "43"
-      },
-      {
-        "lineId": "2045348490",
-        "name": "71",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
-          {
-            "threadId": "2051504770",
-            "noBoarding": true,
-            "EssentialStops": [
-              {
-                "id": "stop__10045804",
-                "name": "Степянка"
-              },
-              {
-                "id": "stop__10045041",
-                "name": "Станция метро Тракторный завод"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [
-                {
-                  "Estimated": {
-                    "value": "1630417253",
-                    "tzOffset": 10800,
-                    "text": "16:40"
-                  },
-                  "vehicleId": "64675|00445439"
-                },
-                {
-                  "Estimated": {
-                    "value": "1630417811",
-                    "tzOffset": 10800,
-                    "text": "16:50"
-                  },
-                  "vehicleId": "64675|00001307"
-                }
-              ],
-              "Frequencies": [
-                {
-                  "text": "13 мин.",
-                  "value": 780,
-                  "begin": {
-                    "value": "1630411671",
-                    "tzOffset": 10800,
-                    "text": "15:07"
-                  },
-                  "end": {
-                    "value": "1630430571",
-                    "tzOffset": 10800,
-                    "text": "20:22"
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=2045348490&ll=27.646116%2C53.900704&name=71&r=2408&type=bus",
-        "seoname": "71"
-      },
-      {
-        "lineId": "4120110692",
-        "name": "43а",
-        "Types": [
-          "bus"
-        ],
-        "type": "bus",
-        "threads": [
-          {
-            "threadId": "4120812442",
-            "noBoarding": true,
-            "EssentialStops": [
-              {
-                "id": "stop__10045804",
-                "name": "Степянка"
-              },
-              {
-                "id": "stop__10045041",
-                "name": "Станция метро Тракторный завод"
-              }
-            ],
-            "BriefSchedule": {
-              "Events": [
-                {
-                  "Scheduled": {
-                    "value": "1630418220",
-                    "tzOffset": 10800,
-                    "text": "16:57"
-                  }
-                },
-                {
-                  "Scheduled": {
-                    "value": "1630420140",
-                    "tzOffset": 10800,
-                    "text": "17:29"
-                  }
-                },
-                {
-                  "Scheduled": {
-                    "value": "1630422060",
-                    "tzOffset": 10800,
-                    "text": "18:01"
-                  }
-                }
-              ],
-              "Frequencies": [],
-              "departureTime": "16:57"
-            }
-          }
-        ],
-        "uri": "ymapsbm1://transit/line?id=4120110692&ll=27.646116%2C53.900704&name=43%D0%B0&r=2408&type=bus",
-        "seoname": "43a"
+        "uri": "ymapsbm1://transit/line?id=2038150090&ll=27.594413%2C53.877751&name=7&r=3108&type=tramway",
+        "seoname": "7"
       }
     ],
     "breadcrumbs": [
@@ -563,47 +350,47 @@
       {
         "name": "Станция метро Тракторный завод",
         "type": "search",
-        "url": "https://yandex.by/maps/157/minsk/stops/stop__10045041/",
+        "url": "https://yandex.by/maps/157/minsk/stops/stop__10046735/",
         "currentPage": true
       }
     ],
     "searchResult": {
       "type": "business",
-      "requestId": "1630416967284452-632035555-sas1-1184-sas-addrs-nmeta-new-8031",
+      "requestId": "1631000715631325-4235032876-vla1-1496-vla-addrs-nmeta-new-8031",
       "analyticsId": "1",
       "title": "Станция метро Тракторный завод",
       "description": "Беларусь, Минск, Долгобродская улица",
       "address": "Беларусь, Минск, Долгобродская улица",
       "coordinates": [
-        27.61615,
-        53.888951
+        27.615513,
+        53.889095
       ],
       "displayCoordinates": [
-        27.61615,
-        53.888951
+        27.615513,
+        53.889095
       ],
       "bounds": [
         [
-          27.602078,
-          53.87491763
+          27.601441,
+          53.87506163
         ],
         [
-          27.630222,
-          53.90297963
+          27.629585,
+          53.90312363
         ]
       ],
-      "uri": "ymapsbm1://transit/stop?id=stop__10045041",
-      "logId": "dHlwZT1iaXpmaW5kZXI7aWQ9MjM4MzIwNjgxMzUy",
-      "id": "238320681352",
+      "uri": "ymapsbm1://transit/stop?id=stop__10046735",
+      "logId": "dHlwZT1iaXpmaW5kZXI7aWQ9MTczNDUxODEyMzUy",
+      "id": "173451812352",
       "metro": [
         {
           "id": "station__9880200",
           "name": "Тракторный завод",
-          "distance": "62 м",
-          "distanceValue": 62.7807,
+          "distance": "17 м",
+          "distanceValue": 17.7399,
           "coordinates": [
-            27.615772703,
-            53.88939571
+            27.615350017,
+            53.889222018
           ],
           "type": "metro",
           "color": "#cc0000"
@@ -611,8 +398,8 @@
         {
           "id": "station__9880199",
           "name": "Партизанская",
-          "distance": "1,6 км",
-          "distanceValue": 1556.13,
+          "distance": "1,7 км",
+          "distanceValue": 1700.9,
           "coordinates": [
             27.627931986,
             53.877347716
@@ -624,7 +411,7 @@
           "id": "station__9880201",
           "name": "Пролетарская",
           "distance": "2,3 км",
-          "distanceValue": 2300.18,
+          "distanceValue": 2298.38,
           "coordinates": [
             27.585747206,
             53.890440076
@@ -635,32 +422,32 @@
       ],
       "stops": [
         {
-          "id": "stop__10045041",
+          "id": "stop__10046735",
           "name": "Станция метро Тракторный завод",
           "distance": "0 м",
-          "distanceValue": 0.0554871,
+          "distanceValue": 0.0327092,
           "coordinates": [
-            27.616149573,
-            53.88895057
+            27.615513441,
+            53.889095136
           ],
           "type": "common"
         },
         {
-          "id": "stop__10046865",
-          "name": "Грицевца",
-          "distance": "250 м",
-          "distanceValue": 249.237,
+          "id": "stop__10046866",
+          "name": "Олега Кошевого",
+          "distance": "290 м",
+          "distanceValue": 287.582,
           "coordinates": [
-            27.616689883,
-            53.887361696
+            27.612189752,
+            53.888073643
           ],
           "type": "common"
         },
         {
           "id": "stop__10046757",
           "name": "Тракторный завод",
-          "distance": "250 м",
-          "distanceValue": 250.958,
+          "distance": "400 м",
+          "distanceValue": 395.729,
           "coordinates": [
             27.618015461,
             53.888139663
@@ -668,42 +455,42 @@
           "type": "common"
         },
         {
-          "id": "1543323773",
-          "name": "Будённого",
-          "distance": "330 м",
-          "distanceValue": 328.083,
-          "coordinates": [
-            27.618813293,
-            53.886521256
-          ],
-          "type": "common"
-        },
-        {
           "id": "stop__10046869",
           "name": "Долгобродская",
-          "distance": "360 м",
-          "distanceValue": 358.856,
+          "distance": "500 м",
+          "distanceValue": 503.627,
           "coordinates": [
             27.618429842,
             53.88639415
           ],
           "type": "common"
+        },
+        {
+          "id": "stop__10045040",
+          "name": "Будённого",
+          "distance": "540 м",
+          "distanceValue": 536.065,
+          "coordinates": [
+            27.619316787,
+            53.886038266
+          ],
+          "type": "common"
         }
       ],
       "panorama": {
-        "id": "1238477180_692493538_23_1558423089",
+        "id": "1238474090_692492402_23_1558422112",
         "direction": [
-          115.7,
+          117.2,
           10
         ],
         "point": {
           "type": "Point",
           "coordinates": [
-            27.6159163068,
-            53.8890171572
+            27.6153983097,
+            53.8891296951
           ]
         },
-        "preview": "https://static-pano.maps.yandex.ru/v1/?panoid=1238477180_692493538_23_1558423089&size=500%2C240&azimuth=115.7&tilt=10&api_key=maps&signature=AwhjEtzKOacVA7QLremY5KSrZXDpJbOjca_hnzEWYwY="
+        "preview": "https://static-pano.maps.yandex.ru/v1/?panoid=1238474090_692492402_23_1558422112&size=500%2C240&azimuth=117.2&tilt=10&api_key=maps&signature=NygezmjtPMcvU7fOssl7KpP1eJQUa8BAZkOGUiSD9DI="
       },
       "shortTitle": "Станция метро Тракторный завод",
       "fullAddress": "Беларусь, Минск, Долгобродская улица",
@@ -726,7 +513,7 @@
         {
           "id": "223677355200",
           "name": "Остановка общественного транспорта",
-          "class": "bus stop",
+          "class": "tram stop",
           "seoname": "public_transport_stop",
           "pluralName": "Остановки общественного транспорта"
         }
@@ -759,7 +546,7 @@
       },
       "references": [
         {
-          "id": "2017216287",
+          "id": "2017219021",
           "scope": "nyak"
         }
       ],
@@ -832,7 +619,7 @@
         {
           "name": "Станция метро Тракторный завод",
           "type": "search",
-          "url": "https://yandex.by/maps/org/stantsiya_metro_traktorny_zavod/238320681352/",
+          "url": "https://yandex.by/maps/org/stantsiya_metro_traktorny_zavod/173451812352/",
           "currentPage": true
         }
       ],

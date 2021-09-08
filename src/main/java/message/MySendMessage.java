@@ -12,9 +12,11 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 import service.StopNameSearcher;
 import service.StopService;
 import service.TransportService;
+import timer.EstimatedTimeTask;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
 import java.util.stream.Collectors;
 
 public class MySendMessage implements Runnable {
@@ -24,6 +26,8 @@ public class MySendMessage implements Runnable {
     String tramway = "\uD83D\uDE8B";
     String bus = "\uD83D\uDE8C";
     String trolleybus = "\uD83D\uDE8E";
+    String transportName = "";
+    String stopId = "";
 
     public MySendMessage(Bot b) {
         bot = b;
@@ -35,6 +39,7 @@ public class MySendMessage implements Runnable {
             for (Object obj = bot.getSendQueue().poll(); obj != null; obj = bot.getSendQueue().poll()) {
                 Update update = (Update) obj;
                 SendMessage sendMessage = new SendMessage();
+                String messageText;
                 //просто сообщение
                 if (update.hasMessage()) {
                     String command = ((Update) obj).getMessage().getText();
@@ -69,15 +74,32 @@ public class MySendMessage implements Runnable {
                         default:
                             // he-he boi, time to some stupid search))
                             List<Stop> stops = StopNameSearcher.findStop(command);
-                            List<Transport> transports = TransportService.getTransportByStops(stops);
-                            transports = transports.stream().filter(x -> !x.getFullName().equals("null")).collect(Collectors.toList());
-                            sendMessage.setChatId(update.getMessage().getChatId());
-                            sendMessage.setText("Here you are, buddy");
-                            sendMessage.setReplyMarkup(createTransportsMarkup(transports));
-                            try {
-                                bot.execute(sendMessage);
-                            } catch (TelegramApiException e) {
-                                e.printStackTrace();
+                            if (stops.isEmpty()) {
+                                sendNoStopsFound(update.getMessage().getChatId());
+                                break;
+                            }
+
+                            for (Stop s : stops) {
+                                List<Transport> transports = TransportService.getTransportByStop(s);
+                                transports = transports.stream().filter(x -> !x.getFullName().equals("null")).collect(Collectors.toList());
+                                sendMessage.setChatId(update.getMessage().getChatId());
+//                            if (stops.isEmpty()) {
+//                                messageText = "didn't find a stop with this name(";
+//                            } else if (transports.isEmpty()) {
+//                                messageText = "didn't find any transport on this stop(";
+//                            } else {
+//                                StringBuilder builder = new StringBuilder("Here you are, buddy");
+//                                stops.forEach((x) -> builder.append("\n"+x.getStopName()));
+//                                messageText = builder.toString();
+//                            }
+
+                                sendMessage.setText(s.getStopName());
+                                sendMessage.setReplyMarkup(createTransportsMarkup(transports));
+                                try {
+                                    bot.execute(sendMessage);
+                                } catch (TelegramApiException e) {
+                                    e.printStackTrace();
+                                }
                             }
                     }
                 }
@@ -86,13 +108,29 @@ public class MySendMessage implements Runnable {
                 if (update.hasCallbackQuery()) {
 
                     if (update.getCallbackQuery().getData().split(":")[0].equals("transport")) {
+                        String message = update.getCallbackQuery().getData().split(":")[1];
+                        transportName = update.getCallbackQuery().getData().split(":")[2];
+                        stopId = update.getCallbackQuery().getData().split(":")[3];
                         sendMessage.setChatId(update.getCallbackQuery().getMessage().getChatId());
                         sendMessage.setText(update.getCallbackQuery().getData().split(":")[1]);
+                        if (update.getCallbackQuery().getData().split(":")[1].toLowerCase().contains("каждые")) {
+                            message+="\nWant to get real estimated time when available?";
+                            sendMessage.setReplyMarkup(createMarkupForTrackAnswer());
+                        }
+                        sendMessage.setText(message);
                         try {
                             bot.execute(sendMessage);
                         } catch (TelegramApiException e) {
                             e.printStackTrace();
                         }
+                    }
+
+                    if (update.getCallbackQuery().getData().equals("answer:yes")) {
+                        Timer timer = new Timer();
+                        EstimatedTimeTask task = new EstimatedTimeTask(transportName,
+                                stopId, timer, update.getCallbackQuery().getMessage().getChatId(), bot);
+                        System.out.println("Hi there"+transportName + stopId + timer + update.getCallbackQuery().getMessage().getChatId()+"end");
+                        timer.scheduleAtFixedRate(task, 0, 10_000);
                     }
 
 //                    if (update.getCallbackQuery().getData().split(":")[0].equals("stop")) {
@@ -130,20 +168,55 @@ public class MySendMessage implements Runnable {
         }
     }
 
+    private ReplyKeyboard createMarkupForTrackAnswer() {
+        List<List<InlineKeyboardButton>> rows = new ArrayList<>();
+        List<InlineKeyboardButton> keyboardButtonsRow = new ArrayList<>();
+        InlineKeyboardButton buttonYes = new InlineKeyboardButton();
+        buttonYes.setText("Yes");
+        buttonYes.setCallbackData("answer:yes");
+        InlineKeyboardButton buttonNo = new InlineKeyboardButton();
+        buttonNo.setText("No");
+        buttonNo.setCallbackData("answer:no");
+        keyboardButtonsRow.add(buttonYes);
+        keyboardButtonsRow.add(buttonNo);
+        rows.add(keyboardButtonsRow);
+        InlineKeyboardMarkup markup = new InlineKeyboardMarkup();
+        markup.setKeyboard(rows);
+        return markup;
+    }
+
+    private void sendNoStopsFound(Long chatId) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("didn't find a stop with this name(");
+        try {
+            bot.execute(sendMessage);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+    }
+
     private ReplyKeyboard createTransportsMarkup(List<Transport> transports) {
         List<List<InlineKeyboardButton>> rows = new ArrayList<>();
 
         for (Transport t : transports) {
             InlineKeyboardButton button = new InlineKeyboardButton();
             String text = "";
-            switch (t.getType()){
-                case "Автобус": text+=bus; break;
-                case "Троллейбус": text+=trolleybus; break;
-                case "Трамвай": text+=tramway; break;
+            switch (t.getType()) {
+                case "Автобус":
+                    text += bus;
+                    break;
+                case "Троллейбус":
+                    text += trolleybus;
+                    break;
+                case "Трамвай":
+                    text += tramway;
+                    break;
             }
-            text +=" " + t.getName() + " " + t.getDirection();
+            text += " " + t.getName() + " " + t.getDirection();
             button.setText(text);
-            button.setCallbackData("transport:" + t.getEstimatedTime());
+            button.setCallbackData("transport:" + t.getEstimatedTime() + ":" + t.getName() + ":" + t.getStopId());
+            System.out.println("Transport markup "+ t.getEstimatedTime() + ":" + t.getName() + ":" + t.getStopId());
             List<InlineKeyboardButton> keyboardButtonsRow = new ArrayList<>();
             keyboardButtonsRow.add(button);
             rows.add(keyboardButtonsRow);

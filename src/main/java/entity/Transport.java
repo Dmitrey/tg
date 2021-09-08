@@ -8,6 +8,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Transport {
+//    @Getter
+//    @Setter
+//    String idTransport; //idThread from yand
     @Getter
     @Setter
     String fullName;
@@ -23,5 +26,8 @@ public class Transport {
     @Getter
     @Setter
     String estimatedTime;
+    @Getter
+    @Setter
+    String stopId; //на какой остановке выбран транспорт
 
 }

@@ -43,7 +43,6 @@ public class MyRequest {
             direction = Optional.ofNullable(page.getFirstByXPath("//li["+i+"]//a[@class=\"masstransit-vehicle-snippet-view__essential-stop\"]"));
             estimatedTime = Optional.ofNullable(page.getFirstByXPath("//li["+i+"]//span[@class=\"masstransit-prognoses-view__title-text\"]"));
             if (fullName.isPresent()){
-
                 name = fullName.get().getAttribute("title").split(" ")[1];
                 type = fullName.get().getAttribute("title").split(" ")[0];
             }
@@ -54,7 +53,47 @@ public class MyRequest {
                     name,
                     (direction.isPresent() ? direction.get().getTextContent() : "null"),
                     type,
-                    (estimatedTime.isPresent() ? estimatedTime.get().getTextContent() : "null")));
+                    (estimatedTime.isPresent() ? estimatedTime.get().getTextContent() : "null"),
+                    stop.getId()));
+        }
+        return transportList;
+    }
+
+    public static List<Transport> getTransports(String stopId) {
+        List<Transport> transportList = new ArrayList<>();
+        WebClient webClient = new WebClient();
+        webClient.getOptions().setCssEnabled(false);
+        webClient.getOptions().setJavaScriptEnabled(false);
+        webClient.getOptions().setThrowExceptionOnScriptError(false);
+        webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
+        String url = String.format("https://yandex.by/maps/157/minsk/stops/%s/",stopId);
+        System.out.println(url);
+        HtmlPage page = null;
+        try {
+            page = webClient.getPage(url);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        assert page != null;
+        DomNodeList<DomElement> li = page.getElementsByTagName("li");
+        for (int i = 1; i <= li.size(); i++) {
+            fullName = Optional.ofNullable(page.getFirstByXPath("//li["+i+"]//a[@class=\"masstransit-vehicle-snippet-view__name\"]"));
+            direction = Optional.ofNullable(page.getFirstByXPath("//li["+i+"]//a[@class=\"masstransit-vehicle-snippet-view__essential-stop\"]"));
+            estimatedTime = Optional.ofNullable(page.getFirstByXPath("//li["+i+"]//span[@class=\"masstransit-prognoses-view__title-text\"]"));
+            if (fullName.isPresent()){
+                name = fullName.get().getAttribute("title").split(" ")[1];
+                type = fullName.get().getAttribute("title").split(" ")[0];
+            }
+            System.out.println( "name: " + (fullName.isPresent() ? fullName.get().getAttribute("title") : "null") +
+                    " direction: " + (direction.isPresent() ? direction.get().getTextContent() : "null") +
+                    " estimated time: " + (estimatedTime.isPresent() ? estimatedTime.get().getTextContent() : "null"));
+            transportList.add(new Transport((fullName.isPresent() ? fullName.get().getAttribute("title") : "null"),
+                    name,
+                    (direction.isPresent() ? direction.get().getTextContent() : "null"),
+                    type,
+                    (estimatedTime.isPresent() ? estimatedTime.get().getTextContent() : "null"),
+                    stopId));
         }
         return transportList;
     }
