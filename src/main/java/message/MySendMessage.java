@@ -95,13 +95,14 @@ public class MySendMessage implements Runnable {
                         for (Transport tr:transportList) {
                             if (tr.getName().equals(transportName))
                                 sendMessage.setText(tr.getEstimatedTime());
+                            if (tr.getName().toLowerCase().contains("каждые")) {
+                                message+="\nWant to get real estimated time when available?";
+                                sendMessage.setReplyMarkup(createMarkupForTrackAnswer());
+                            }
                         }
                         sendMessage.setChatId(update.getCallbackQuery().getMessage().getChatId());
 //                        sendMessage.setText(update.getCallbackQuery().getData().split(":")[1]);
-                        if (update.getCallbackQuery().getData().split(":")[1].toLowerCase().contains("каждые")) {
-                            message+="\nWant to get real estimated time when available?";
-                            sendMessage.setReplyMarkup(createMarkupForTrackAnswer());
-                        }
+
                         sendMessage.setText(message);
                         try {
                             bot.execute(sendMessage);
