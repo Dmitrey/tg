@@ -58,8 +58,8 @@ public class MySendMessage implements Runnable {
                             }
                             break;
                         default:
-                            if (command.length() < 3){
-                                sendMessage(update.getMessage().getChatId(),"Enter at least 3 symbols");
+                            if (command.length() < 3) {
+                                sendMessage(update.getMessage().getChatId(), "Enter at least 3 symbols");
                                 break;
                             }
                             // he-he boi, time to some stupid search))
@@ -92,17 +92,17 @@ public class MySendMessage implements Runnable {
                         transportName = update.getCallbackQuery().getData().split(":")[2];
                         stopId = update.getCallbackQuery().getData().split(":")[3];
                         List<Transport> transportList = MyRequest.getTransports(stopId);
-                        for (Transport tr:transportList) {
-                            if (tr.getName().equals(transportName))
-                                sendMessage.setText(tr.getEstimatedTime());
-                            if (tr.getName().toLowerCase().contains("каждые")) {
-                                message+="\nWant to get real estimated time when available?";
-                                sendMessage.setReplyMarkup(createMarkupForTrackAnswer());
+                        transportList = transportList.stream().filter(x -> !x.getFullName().equals("null")).collect(Collectors.toList());
+                        for (Transport tr : transportList) {
+                            if (tr.getName().equals(transportName)) {
+                                message = tr.getEstimatedTime();
+                                if (tr.getEstimatedTime().toLowerCase().contains("каждые")) {
+                                    message += "\nWant to get real estimated time when available?";
+                                    sendMessage.setReplyMarkup(createMarkupForTrackAnswer());
+                                }
                             }
                         }
                         sendMessage.setChatId(update.getCallbackQuery().getMessage().getChatId());
-//                        sendMessage.setText(update.getCallbackQuery().getData().split(":")[1]);
-
                         sendMessage.setText(message);
                         try {
                             bot.execute(sendMessage);
@@ -115,7 +115,7 @@ public class MySendMessage implements Runnable {
                         Timer timer = new Timer();
                         EstimatedTimeTask task = new EstimatedTimeTask(transportName,
                                 stopId, timer, update.getCallbackQuery().getMessage().getChatId(), bot);
-                        System.out.println("Hi there"+transportName + stopId + timer + update.getCallbackQuery().getMessage().getChatId()+"end");
+                        System.out.println("Hi there" + transportName + stopId + timer + update.getCallbackQuery().getMessage().getChatId() + "end");
                         timer.scheduleAtFixedRate(task, 0, 10_000);
                         sendMessage(update.getCallbackQuery().getMessage().getChatId(), "notification will be send");
                     }
@@ -184,7 +184,7 @@ public class MySendMessage implements Runnable {
             text += " " + t.getName() + " " + t.getDirection();
             button.setText(text);
             button.setCallbackData("transport:" + t.getEstimatedTime() + ":" + t.getName() + ":" + t.getStopId());
-            System.out.println("Transport markup "+ t.getEstimatedTime() + ":" + t.getName() + ":" + t.getStopId());
+            System.out.println("Transport markup " + t.getEstimatedTime() + ":" + t.getName() + ":" + t.getStopId());
             List<InlineKeyboardButton> keyboardButtonsRow = new ArrayList<>();
             keyboardButtonsRow.add(button);
             rows.add(keyboardButtonsRow);
